@@ -1,0 +1,16 @@
+[
+  {
+    "id": "currila_uni",
+    "name": "Universiteti A. Moisiu – Currila",
+    "lat": 41.3189,
+    "lng": 19.4471,
+    "radius": 60
+  },
+  {
+    "id": "port",
+    "name": "Porti i Durrësit",
+    "lat": 41.3132,
+    "lng": 19.4443,
+    "radius": 60
+  }
+]

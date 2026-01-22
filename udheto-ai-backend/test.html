@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Udhëto-Al Test</title>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+</head>
+<body>
+  <h1>Bus Updates</h1>
+  <ul id="log"></ul>
+
+  <script>
+    const socket = io("http://localhost:3001");
+
+    socket.emit("join_line", { lineId: "currila" });
+
+    const log = document.getElementById("log");
+
+    socket.on("bus_update", (data) => {
+      const li = document.createElement("li");
+      li.textContent = JSON.stringify(data);
+      log.appendChild(li);
+      console.log(data);
+    });
+  </script>
+</body>
+</html>
